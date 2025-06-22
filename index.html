@@ -13,18 +13,19 @@
   <body>
     <a-scene embedded arjs="sourceType: webcam;">
       <a-assets>
-        <a-asset-item id="pokemonModel" src="models/scene.gltf"></a-asset-item>
+        <a-asset-item id="pokemonModel" src="models/pokemon.glb"></a-asset-item>
       </a-assets>
 
       <a-marker preset="hiro">
         <a-entity 
           gltf-model="#pokemonModel"
-          scale="2 2 2"
+          scale="0.5 0.5 0.5"
           position="0 0 0"
           rotation="0 180 0">
         </a-entity>
       </a-marker>
 
+      <a-entity light="type: directional; color: white; intensity: 1" position="0 1 1"></a-entity>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
